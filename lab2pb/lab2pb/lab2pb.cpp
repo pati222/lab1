@@ -64,33 +64,33 @@ int main()
     }*/
 
     //Zad4
-    int a, b, c;
+   int a, b, c;
     char odp;
+
     cout << "Wymysl sobie liczbe i podaj jej zakres, w ktorym ona sie znajduje" << endl;
     cin >> a >> b;
-    if (a == b)
-    {
+
+    if (a == b) {
         cout << "Twoja wymyslona liczba to: " << a << endl;
-    }
-    else
-    {
-        while (a!=b)
-        {
+    } else {
+        while (a <= b) {
             c = (a + b) / 2;
-            cout << "Liczba jest mniejsza (-) czy wieksza (+) od " << c << "?" << endl;
+            cout << "Czy Twoja liczba jest mniejsza (-), wieksza (+), czy rowna (=) od " << c << "? ";
             cin >> odp;
-            if (odp == '-')
-            {
-                b = c;
-            }
-            else
-            {
-                a = c;
+
+            if (odp == '=') {
+                cout << "Twoja liczba to: " << c << endl;
+                break;
+            } else if (odp == '-') {
+                b = c - 1;
+            } else if (odp == '+') {
+                a = c + 1;
+            } else {
+                cout << "Niepoprawna odpowiedz! Uzyj -, + lub =." << endl;
             }
         }
-        cout << "Twoja liczba to: " << a << endl;
-
     }
 
 }
+
 
